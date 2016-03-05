@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Person App</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="person_app.js"></script>
 </head>
 <body>
+    <h1>Welcome to the Person App</h1>
 
+    <div id="choice">
+        <input id="chkCst" name="chkCst" type="checkbox" value="Customer" class="checkbox"> Customer</input> <BR>
+        <input id="chkEmp" name="chkEmp" type="checkbox" value="Employee" class="checkbox"> Employee</input> <BR>
+
+    </div>
+
+    <div id="general">
+        First Name: <input id="first" name="first" type="text" value="" placeholder="Enter First Name" class="textbox"> <BR>
+        Last Name:  <input id="last" name="last" type="text" value="" placeholder="Enter Last Name" class="textbox"> <BR>
+        Email:      <input id="email" name="email" type="text" value="" placeholder="Enter Email" class="textbox"> <BR>
+
+    </div>
+
+    <div id="cusNum" class="hide">
+        Customer Number: <input id="cn" name="cn" type="text" value="" placeholder="Enter the Customer Number" class="textbox"><BR>
+    </div>
+
+    <div id="ssNum" class="hide">
+        Social Security Number: <input id="ssn" name="ssn" type="text" value="" placeholder="Enter Social Security Number" class="textbox"> <BR>
+    </div>
+
+    <div id="submitButton">
+        <input id="submit" name="submit" type="submit" value="Submit"></input>
+    </div>
+
+    <div id="submitted" class="hide">
+        <z id="person"></z>
+        <z>info submitted: <z/><BR><BR>
+        <z>First Name: </z>
+        <z id="fn"></z><BR>
+        <z> Last Name: </z>
+        <z id="ln"></z><BR>
+        <z> Email: </z>
+        <z id="em"></z><BR>
+        <z id="perso"></z>
+        <z id="sp"></z>
+
+
+    </div>
 </body>
 </html>

@@ -1,0 +1,51 @@
+div.hide {
+    display: none;
+}
+
+h1 {
+    font-size: 18pt;
+    font-family: Futura, Arial;
+    color: dimgray;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(to bottom right, rgba(86,225,232,.3), rgba(252,235,40, .8)) no-repeat fixed center;
+    text-align: center;
+}
+
+div {
+    font-family: Futura, Arial;
+
+}
+
+#choice {
+    display: inline-flex;
+
+}
+
+#general, #submitButton {
+    position: relative;
+    right: 120px;
+    top: 10px;
+}
+#email {
+    position: relative;
+    left: 19px;
+}
+#cusNum {
+    position: relative;
+    right: 150px;
+    top: 10px;
+}
+#ssNum{
+    position: relative;
+    right: 166px;
+    top: 10px;
+}
+
+#submitted {
+    position: relative;
+    left: 120px;
+    bottom: 100px;
+}
