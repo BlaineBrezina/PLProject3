@@ -1,15 +1,17 @@
 $(document).ready( function () {
-    /*$.each("#image_list", function () {
-       $("a").load("href", "title");
+    $('li a').each(function() {
+        (new Image).src = this.href;
     });
-    */
+
 
     //preload the images
-    $.fn.preload = function() {
-        this.each(function(){
-            $("<img/>")[0].src = this;
-        });
-    };
+    //$.fn.preload = function() {
+    //    this.each(function(){
+    //        alert("the image has been loaded");
+    //        $('<img/>')[0].src = $(this).attr("href");
+
+    //    });
+    //};
 
 // Usage:
 
