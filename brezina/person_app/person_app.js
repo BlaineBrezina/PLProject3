@@ -32,6 +32,8 @@ $(document).ready( function () {
     // check if all form parts are filled before submit
     $("#submitButton").click(function(){
         var filled = true;
+        var isNum = true;
+        var isString = true;
 
         $("#general").children().each(function () {
             if ($(this).prop("value") == "") {
@@ -39,9 +41,22 @@ $(document).ready( function () {
             }
         });
 
+        var fn = $("#first").prop("value");
+        var ln = $("#last").prop("value");
+
+        var matches1 = fn.match(/\d+/g);
+        var matches2 = ln.match(/\d+/g);
+
+        if ((matches1 != null) || (matches2 != null)) {
+            isString = false;
+        }
+
+        // checks if number is an integer as well as if it is there
         if (personType == "Employee") {
             if ($("#ssn").prop("value") == "") {
                 filled = false;
+            } else if (!(Number($("#ssn").prop("value")) === parseInt($("#ssn").prop("value"), 10))) {
+                isNum = false;
             }
         }
 
@@ -55,7 +70,7 @@ $(document).ready( function () {
             filled = false;
         }
 
-        if (filled == true) {
+        if ((filled == true) && (isNum == true) && (isString == true)) {
             $("#submitted").show();
             var fn = $("#first").prop("value");
             var ln = $("#last").prop("value");
@@ -80,8 +95,12 @@ $(document).ready( function () {
 
             $("#submitted").show();
 
-        } else {
+        } else if (filled == false) {
             alert("Please Fill in All Required Fields")
+        } else if (isNum == false) {
+            alert("Please Make sure that Employee Social Security Number Entered is a Number ;)")
+        } else if (isString == false) {
+            alert("Please make sure that the person's first and last name do not contain numbers")
         }
 
 
